@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=twitcord_postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=twitcord
+POSTGRES_USER=twitcord
+POSTGRES_PASSWORD=twitcord

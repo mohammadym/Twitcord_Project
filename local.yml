@@ -1,0 +1,80 @@
+
+
+version: '3.7'
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    image: twitcord_local_django
+    container_name: twitcord_django
+    depends_on:
+      - postgres
+      - redis
+      - minio
+    volumes:
+      - ./twitcord_Back:/app:z
+    env_file:
+      - ./twitcord_Back/.envs/.local/.django
+      - ./twitcord_Back/.envs/.local/.postgres
+#    ports:
+#      - "8000:8000"
+    network_mode: "host"
+    command: /start
+
+  postgres:
+    build:
+      context: .
+      dockerfile: ./compose/production/postgres/Dockerfile
+    image: twitcord_production_postgres
+    container_name: twitcord_postgres
+    volumes:
+      - local_postgres_data:/var/lib/postgresql/data:Z
+      - local_postgres_data_backups:/backups:z
+    env_file:
+      - ./twitcord_Back/.envs/.local/.postgres
+    ports:
+      - "5435:5432"
+  
+  react:
+    build:
+      context: .
+      dockerfile: ./compose/local/react/Dockerfile
+    image: twitcord_local_react:dev
+    container_name: twitcord_react
+    command: sh -c "/usr/src/app/entrypoint.sh"
+    volumes:
+      - './twitcord_front:/usr/src/app/twitcord_front'
+      - 'twitcord_node_modules:/usr/src/app/twitcord_front/node_modules'
+#    ports:
+#      - "3000:3000"
+    network_mode: "host"
+    deploy:
+      restart_policy:
+        condition: on-failure
+    stdin_open: true
+
+  minio:
+    image: "minio/minio"
+    command: server /storage
+#    ports:
+#      - "9000:9000"
+    network_mode: "host"
+    environment:
+      MINIO_ROOT_USER: minio_user
+      MINIO_ROOT_PASSWORD: minio_pass
+    volumes:
+      - local_storage_minio:/storage
+  
+  redis:
+    image: redis:5
+    container_name: twitcord_redis
+    command: --port 6380
+    network_mode: "host"
+
+volumes:
+  local_postgres_data: { }
+  local_postgres_data_backups: { }
+  twitcord_node_modules:
+  local_storage_minio:

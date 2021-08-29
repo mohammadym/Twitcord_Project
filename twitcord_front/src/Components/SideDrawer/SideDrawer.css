@@ -1,0 +1,122 @@
+.app-name{
+    font-size: x-large !important;
+    text-align: right;
+    font-family: monospace !important;
+    font-weight: bold;
+    padding-right: 45px !important;
+    float: right;
+    margin-bottom: 50px !important;
+}
+
+.sd-icon{
+    padding: 20px;
+}
+
+.sd-title{
+    width: 120px;
+}
+
+.sd-item{
+    float: right;
+    display: flex;
+    cursor: pointer;  
+    margin-top: 3px;
+    box-sizing: unset;
+    border-radius: 55px;
+    align-items: center;
+}
+
+.sd-user-email{
+    width: fit-content;
+    max-width: 140px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.sd-avatar{
+    margin: 20px;
+}
+
+.sd-logo{
+    width: 150px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.sd-logout-icon{
+    margin-right: 20px;
+}
+
+.sd-account{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 30px;
+    margin-right: 45px;
+    width: fit-content;
+}
+
+.sd-root{
+    position: fixed;
+    width: 30%;
+}
+
+.sd-container{
+    width: min-content;
+    float: right;
+    padding:20px;
+    display: grid;
+    justify-items: center;
+}
+
+.sd-item:hover{
+    float: right;
+    border-radius: 55px;
+    box-sizing: unset;
+    background: rgb(248, 248, 248);
+}
+
+.sd-item-selected{
+    float: right;
+    display: flex;
+    align-items: center;
+    box-sizing: unset;
+    margin-top: 3px;
+    border-radius: 55px;
+    background: rgb(231, 231, 231);
+}
+
+@media screen and (max-width: 900px)  {
+    .sd-title {
+        display: none;
+      }
+
+    .app-name{
+        padding: 0px !important;
+    }
+
+    .sd-account{
+        margin-right: 30px;
+    }
+
+    .sd-logo{
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+      .app-name{
+          display: none;
+      }
+      .sd-container{
+        padding:5%;
+    }
+
+    .sd-account{
+        margin-right: 0px;
+    }
+    
+}

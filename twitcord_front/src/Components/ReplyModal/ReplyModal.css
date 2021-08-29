@@ -1,0 +1,56 @@
+.custom-textarea {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  resize: none;
+}
+
+.custom-textarea:focus {
+  outline: none;
+}
+
+.vl {
+  border-left: 2px solid rgb(185, 184, 184);
+  height: 100%;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
+.ml--3 {
+  margin-left: -1rem !important;
+}
+
+.w-48 {
+  width: 48px !important;
+}
+
+.h-48 {
+  height: 48px !important;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+
+.py-4-px{
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+.px-12 {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+.br-16 {
+  border-radius: 16px !important;
+}
+
+@media (max-width:600px) {
+  .min-w-auto-sm {
+    min-width: auto !important; 
+  }
+}

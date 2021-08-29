@@ -1,0 +1,71 @@
+.rl-root{
+    position: relative;
+}
+
+.rl-fab{
+    position: fixed !important;
+    bottom: 25px;
+    right: 26%;
+}
+
+.rl-modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rl-avatar{
+    margin-top: 45px;
+    width: 100px !important;
+    height: 100px !important;
+    cursor: pointer;
+}
+
+.rl-clear{
+    color: gray;
+    cursor: pointer;
+}
+
+.rl-icon{
+    width: 60px !important;
+    height: 60px !important;
+}
+
+.rl-room-name{
+    margin-top: 20px !important;
+    width: 100%;
+}
+
+.rl-paper{
+    background-color: white;
+    box-shadow: 0 2.8px 2.2px rgb(78 78 78 / 47%);
+    border-radius: 7px;
+    border: none !important;
+    padding: 20px;
+    min-width: 320px !important;
+    text-align: -webkit-center;
+}
+
+.rl-title{
+    font-size: x-large !important;
+    font-weight: bold !important;
+    color: #4c4c4c;
+}
+
+.rl-select{
+    max-width: 320px;
+    margin-top: 20px;
+}
+
+.rl-create-room{
+    margin-top: 20px !important;
+    width: 100%;}
+
+@media screen and (max-width: 1280px) {
+    .rl-fab{
+        position: fixed !important;
+        bottom: 25px;
+        right: 25px;
+    }
+  }
+  

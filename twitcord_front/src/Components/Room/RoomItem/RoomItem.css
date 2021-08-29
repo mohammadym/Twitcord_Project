@@ -1,0 +1,34 @@
+.ri-container{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ri-avatar-container{
+    text-align: -webkit-center;
+}
+
+.ri-details-container{
+    padding-left: 10px;
+}
+
+.ri-avatar{
+    width: 55px !important;
+    height: 55px !important;
+}
+
+.ri-members-count{
+    font-size: small !important;
+    color: darkgrey !important;
+}
+
+.ri-room-name{
+    font-size: large !important;
+    padding-top: 2px;
+}
+
+@media screen and (max-width: 600px) {
+    .ri-details-container{
+        margin-top: 7px !important;
+        text-align: -webkit-center;
+    }
+  }

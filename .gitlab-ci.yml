@@ -1,0 +1,24 @@
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  image: node:12.14.0
+  script:
+    - echo "Start building App"
+    - cd twitcord_front/
+    - npm install
+    - npm run build
+    - echo "Build successfully!"
+
+test:
+  stage: test
+  image: node:12.14.0
+  needs: [build]
+  script:
+    - echo "Testing App"
+    - cd twitcord_front/
+    - npm install
+    - CI=true npm test
+    - echo "Test successfully!"

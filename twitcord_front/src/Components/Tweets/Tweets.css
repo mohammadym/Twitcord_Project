@@ -1,0 +1,123 @@
+.t-container {
+  max-width: 800px;
+  padding: 15px !important;
+}
+
+.avatar {
+  width: 10% !important;
+  height: 10% !important;
+}
+
+.t-avatar-container:hover {
+  cursor: pointer;
+}
+
+.t-avatar-container {
+  display: flex;
+}
+
+.t-name-container {
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.t-lock-icon {
+  margin-left: 5px;
+  margin-top: 3px;
+  font-size: medium !important;
+  align-self: center;
+}
+
+.t-username-container {
+  margin-left: 20px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.t-item-desc {
+  order: 2;
+}
+
+.t-name {
+  margin: 0;
+  font-size: x-large !important;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.t-icon-bottom-bar {
+  order: 3;
+  justify-content: space-around;
+  margin-top: -30px !important;
+  padding: 15px !important;
+}
+
+.t-name:hover {
+  text-decoration: underline;
+}
+
+.t-username {
+  color: gray;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.t-dot {
+  display: inline-block;
+  text-align: right;
+  background: rgb(190, 190, 190);
+  width: 3px;
+  margin-bottom: 3px;
+  height: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 100px;
+}
+
+.t-username:hover {
+  text-decoration: underline;
+}
+
+.t-date {
+  color: rgb(190, 190, 190);
+  align-self: flex-end;
+  padding: 3px;
+}
+
+.t-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-top: -30px !important;
+  padding-left: 80px;
+}
+.t-like:hover {
+  background-color: red;
+  color: red;
+}
+
+@media screen and (max-width: 600px) {
+  .t-item-desc {
+    order: 1;
+  }
+
+  .t-icon-bottom-bar {
+    order: 2;
+  }
+
+  .t-follow-button {
+    margin-top: -30px !important;
+  }
+}

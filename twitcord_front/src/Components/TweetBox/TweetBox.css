@@ -1,0 +1,73 @@
+.tweet-box {
+  display: block;
+  width: 100% !important;
+  margin: auto;
+  overflow: auto;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.tweet-box textarea {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  border: solid 1px whitesmoke;
+  resize: none;
+  border-radius: 4px;
+}
+
+.tweet-box textarea:hover {
+  border: solid 1px rgb(187, 187, 187);
+}
+
+.tweet-box textarea:focus {
+  border: solid 1px rgb(156, 156, 156) !important;
+  outline: none;
+}
+
+.tweet-box-button {
+  width: 100%;
+  margin-top: 10px !important;
+  box-shadow: none !important;
+  float: right;
+}
+
+.p-10 {
+  padding: 10px !important; 
+}
+
+.tb-items-box{
+  display: flex;
+    align-items: center;
+}
+
+.tb-image-icon{
+  width: 40px !important;
+  height: 40px !important;
+  margin-left: 10px;
+  cursor: pointer;
+  color: rgb(172, 172, 172);
+}
+
+.tb-media{
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.tb-clear-media{
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+  color: gray;
+  right: 15px;
+  background: white;
+  border-radius: 50%;
+}
+
+.tb-media-container{
+  position: relative;
+}

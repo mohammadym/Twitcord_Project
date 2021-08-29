@@ -1,0 +1,15 @@
+.input-base{
+    flex: 1;
+    margin-left: 12px;
+}
+
+.root{
+    padding: 2px 4px !important;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon{
+    padding: 10;
+    float: right;
+}

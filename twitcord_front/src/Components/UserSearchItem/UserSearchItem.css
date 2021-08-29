@@ -1,0 +1,108 @@
+
+.usi-avatar {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.usi-avatar-container:hover{
+  cursor: pointer;
+}
+
+.usi-item-hover:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.usi-avatar-container {
+  display: flex;
+}
+.usi-info-container{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.usi-name-container {
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.usi-lock-icon {
+  margin-left: 5px;
+  margin-top: 3px;
+  font-size: medium !important;
+  align-self: center;
+}
+
+.usi-username-container {
+  margin-left: 20px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.usi-follow-button {
+  float: right;
+  width: fit-content;
+}
+
+.usi-item-follow{
+  order: 1;
+}
+
+.usi-item-desc{
+  order: 2;
+}
+
+.usi-name {
+  margin: 0;
+  font-size: x-large !important;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.usi-name:hover{
+  text-decoration: underline;
+}
+
+.usi-username {
+  color: gray;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.usi-username:hover{
+  text-decoration: underline;
+}
+
+.usi-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-top: -30px !important;
+  padding-left: 80px;
+}
+
+@media screen and (max-width: 600px) {
+  .usi-item-desc {
+    order: 1
+  }
+
+  .usi-item-follow{
+    order: 2;
+  }
+
+  .usi-follow-button{
+    margin-top: -30px !important;
+    width: 100%;
+  }
+}
